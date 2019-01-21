@@ -1,11 +1,11 @@
 import React from "react";
 import { shallow } from "enzyme";
-import GussedWords from "../GussedWords";
+import GuessedWords from "../GuessedWords";
 
 import { findByAttr, validatePropTypes } from "../../test/testUtils";
 
 const defaultProps = {
-	gussedWords: [
+	guessedWords: [
 		{
 			word: "train",
 			wordlength: 5
@@ -14,12 +14,12 @@ const defaultProps = {
 };
 const setup = (props = {}) => {
 	const expectedProps = { ...defaultProps, ...props };
-	return shallow(<GussedWords {...expectedProps} />);
+	return shallow(<GuessedWords {...expectedProps} />);
 };
 
 describe("<GussedWords> component", () => {
 	test("renders no error for default props", () => {
-		const validatingProps = validatePropTypes(GussedWords, { gussedWords });
+		const validatingProps = validatePropTypes(GuessedWords, defaultProps);
 		expect(validatingProps).toBeUndefined();
 	});
 });

@@ -1,12 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Gussedwords = props => {
+const GuessedWords = props => {
 	return <div />;
 };
 
-Gussedwords.propTypes = {
-	gussedWords: PropTypes.arrayOf(
+GuessedWords.propTypes = {
+	guessedWords: PropTypes.arrayOf(
 		PropTypes.shape({
 			word: PropTypes.string,
 			wordlength: PropTypes.number
@@ -14,4 +14,4 @@ Gussedwords.propTypes = {
 	).isRequired
 };
 
-export default Gussedwords;
+export default GuessedWords;
